@@ -44,22 +44,22 @@ cd "$CURRENT_DIR"
 
 # Symlink VS Code settings and keybindings to the present `settings.json` and `keybindings.json` files
 # If it's a macOS
-if [[ `uname` =~ "Darwin" ]]; then
-  CODE_PATH=~/Library/Application\ Support/Code/User
+#if [[ `uname` =~ "Darwin" ]]; then
+#  CODE_PATH=~/Library/Application\ Support/Code/User
 # Else, it's a Linux
-else
-  CODE_PATH=~/.config/Code/User
+#else
+ #CODE_PATH=~/.config/Code/User
   # If this folder doesn't exist, it's a WSL
   #if [ ! -e $CODE_PATH ]; then
    # CODE_PATH=~/.vscode-server/data/Machine
   #fi
-fi
+#fi
 
-for name in settings.json keybindings.json; do
-  target="$CODE_PATH/$name"
-  backup $target
-  symlink $PWD/$name $target
-done
+#for name in settings.json keybindings.json; do
+ # target="$CODE_PATH/$name"
+ #backup $target
+  #symlink $PWD/$name $target
+#done
 
 # Symlink SSH config file to the present `config` file for macOS and add SSH passphrase to the keychain
 if [[ `uname` =~ "Darwin" ]]; then
