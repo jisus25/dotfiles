@@ -50,9 +50,9 @@ if [[ `uname` =~ "Darwin" ]]; then
 else
   CODE_PATH=~/.config/Code/User
   # If this folder doesn't exist, it's a WSL
-  if [ ! -e $CODE_PATH ]; then
-    CODE_PATH=~/.vscode-server/data/Machine
-  fi
+  #if [ ! -e $CODE_PATH ]; then
+   # CODE_PATH=~/.vscode-server/data/Machine
+  #fi
 fi
 
 for name in settings.json keybindings.json; do
